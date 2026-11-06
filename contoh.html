@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    <style>
+        /* CSS Reset & Dasar */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            /* Background gradient sederhana sebagai latar belakang */
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        /* Container Utama dengan efek Glassmorphism */
+        .about-section {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-header h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .about-header p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Layout Grid untuk Visi, Misi & Nilai */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Card individual */
+        .card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2a5298;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style-type: none;
+        }
+
+        .card ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        /* Kustomisasi bullet point */
+        .card ul li::before {
+            content: "•";
+            color: #2a5298;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Responsivitas untuk layar kecil */
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 2rem 1.5rem;
+            }
+            .about-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="about-section">
+        <!-- Bagian Pembuka -->
+        <div class="about-header">
+            <h2>Membangun Masa Depan Digital</h2>
+            <p>Berawal dari tahun 2022, perusahaan kami hadir dengan satu tujuan: membuat solusi teknologi tinggi dapat diakses oleh semua skala bisnis. Kami percaya inovasi tidak seharusnya rumit.</p>
+        </div>
+
+        <!-- Bagian Konten Visi, Misi, Nilai (Grid) -->
+        <div class="about-grid">
+            
+            <div class="card">
+                <h3>Visi Kami</h3>
+                <p>Menjadi penggerak utama dalam ekosistem digital dengan memberdayakan UMKM hingga perusahaan berskala global melalui teknologi yang cerdas dan efisien.</p>
+            </div>
+
+            <div class="card">
+                <h3>Misi Kami</h3>
+                <ul>
+                    <li>Mengembangkan perangkat lunak intuitif.</li>
+                    <li>Memberikan dukungan teknis transparan.</li>
+                    <li>Beradaptasi dengan teknologi masa depan.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Nilai Perusahaan</h3>
+                <ul>
+                    <li><strong>Inovasi:</strong> Solusi kreatif tanpa henti.</li>
+                    <li><strong>Kolaborasi:</strong> Bekerja sebagai satu tim solid.</li>
+                    <li><strong>Fokus Pengguna:</strong> Memprioritaskan kenyamanan klien.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
